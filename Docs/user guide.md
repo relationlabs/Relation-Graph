@@ -1,11 +1,11 @@
 # Relation-Graph user guide
 
-## prepare
-- get the Executable program 
+## Prepare
+- Get the Executable program 
 ```shell
 git clone https://github.com/relationlabs/Relation-Graph.git
 ```
-- choose the program for your OS and unzip it, take MacOS as example
+- Choose the program for your OS and unzip it, take MacOS as example
 ```shell
 cd /Executable Program
 unzip subgraph-macos.zip
@@ -19,20 +19,20 @@ unzip subgraph-macos.zip
 ```shell
 ./subgraph-linux --dev  --base-path ./test-chain
 ```
-please make sure the port 9944 is available,and if the program launch successfully, you see the command line as below
+Please make sure the port 9944 is available,and if the program launch successfully, you see the command line as below
 
 ![image](https://user-images.githubusercontent.com/91399393/176400350-874d2ebe-c01b-47af-9f3e-8fc7dcd17b7d.png)
 
 ## Connection Node
-- open the browser (highly recommended chrome, Safari and others browsers may encounter some problems)
-- open the link: https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/explorer
-- when connection the node, you will see the page display as below
+- Open the browser (highly recommended chrome, Safari and others browsers may encounter some problems)
+- Open the link: https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/explorer
+- When connection the node, you will see the page display as below
 
 ![image](https://user-images.githubusercontent.com/91399393/176409173-c464e241-a6e5-4609-b9a6-21a61b37753f.png)
 
 
 ## Usage
-- switch to extrinsics from top navigation bar
+- Switch to extrinsics from top navigation bar
 ```shell 
 Developer -> extrinsics
 ```
@@ -48,7 +48,7 @@ Developer -> extrinsics
 
 ![image](https://user-images.githubusercontent.com/91399393/176416651-8318b78e-8373-4f70-9cff-7a83ad496c01.png)
 
-- [test case] insert Data. 
+- [test case] Insert Data. 
 Sample SPARQL: insert a record for person P1001
 ```
 INSERT DATA
