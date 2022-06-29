@@ -48,7 +48,7 @@ Developer -> extrinsics
 
 ![image](https://user-images.githubusercontent.com/91399393/176416651-8318b78e-8373-4f70-9cff-7a83ad496c01.png)
 
-#### [test case] Insert Data. 
+#### [Test Case] Insert Data. 
 Sample SPARQL: insert a record for person P1001
 ```
 INSERT DATA
@@ -64,7 +64,7 @@ Paste this sparql to browser [update] area, and submit this transaction
 
 ![image](https://user-images.githubusercontent.com/91399393/176417734-9100574b-df72-4088-84dc-e1c65c6f937a.png)
 
-#### [test case] Update Data
+#### [Test Case] Update Data
 Changes to existing triples are performed as a delete operation followed by an insert operation in a single update request. The specification refers to this as DELETE/INSERT
 
 Sample SPARQL: update age to 36 for person P001
@@ -75,7 +75,7 @@ DELETE  { :P1001 :age ?o } INSERT { :P1001 :age 36 } WHERE { :P1001 :age ?o }
 Paste this sparql to browser [update] area, and submit this transaction
 
 ![image](https://user-images.githubusercontent.com/91399393/176489974-5be46194-bd71-4d2a-abed-15bcd7b9ff26.png)
-#### [test case] Delete Data
+#### [Test Case] Delete Data
 Sample SPARQL: delete all properties of person P001
 ```
 DELETE  WHERE { :P1001 ?p ?o. } 
@@ -93,7 +93,7 @@ Paste this sparql to browser [update] area, and submit this transaction
 
 ![image](https://user-images.githubusercontent.com/91399393/176491911-fa8e9089-5c78-4054-929d-aed3f38099dc.png)
 
-#### [test case] SPARQL Query
+#### [Test Case] SPARQL Query
 For now, data query can only operate by calling RPC sparql_query with SPARQL.
 Sample SPARQL: query the basic personal properties of person P001
 ```
