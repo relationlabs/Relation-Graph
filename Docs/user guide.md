@@ -1,11 +1,11 @@
 # Relation-Graph user guide
 
 ## Prepare
-- Get the Executable program 
+### Get the Executable program 
 ```shell
 git clone https://github.com/relationlabs/Relation-Graph.git
 ```
-- Choose the program for your OS and unzip it, take MacOS as example
+### Choose the program for your OS and unzip it, take MacOS as example
 ```shell
 cd /Executable Program
 unzip subgraph-macos.zip
@@ -32,23 +32,23 @@ Please make sure the port 9944 and 9933 is available,and if the program launch s
 
 
 ## Usage
-- Switch to extrinsics from top navigation bar
+### Switch to extrinsics from top navigation bar
 ```shell 
 Developer -> extrinsics
 ```
-- Choose a account which has balance and choose [graphdb] extrinsic，then initDb
+### Choose a account which has balance and choose [graphdb] extrinsic，then initDb
 
 ![image](https://user-images.githubusercontent.com/91399393/176415644-857882ac-5eda-43a5-8082-e985aa518bd9.png)
 
-- Click Sign and Submit
+### Click Sign and Submit
 
 ![image](https://user-images.githubusercontent.com/91399393/176415961-9814c3f1-52dd-4215-a873-a2cf261a1fbb.png)
 
-- After transaction success, switch to sparqlUpdate to manipulate the database
+### After transaction success, switch to sparqlUpdate to manipulate the database
 
 ![image](https://user-images.githubusercontent.com/91399393/176416651-8318b78e-8373-4f70-9cff-7a83ad496c01.png)
 
-- [test case] Insert Data. 
+#### [test case] Insert Data. 
 Sample SPARQL: insert a record for person P1001
 ```
 INSERT DATA
@@ -64,7 +64,7 @@ Paste this sparql to browser [update] area, and submit this transaction
 
 ![image](https://user-images.githubusercontent.com/91399393/176417734-9100574b-df72-4088-84dc-e1c65c6f937a.png)
 
-- [test case] Update Data
+#### [test case] Update Data
 Changes to existing triples are performed as a delete operation followed by an insert operation in a single update request. The specification refers to this as DELETE/INSERT
 
 Sample SPARQL: update age to 36 for person P001
@@ -75,7 +75,7 @@ DELETE  { :P1001 :age ?o } INSERT { :P1001 :age 36 } WHERE { :P1001 :age ?o }
 Paste this sparql to browser [update] area, and submit this transaction
 
 ![image](https://user-images.githubusercontent.com/91399393/176489974-5be46194-bd71-4d2a-abed-15bcd7b9ff26.png)
-- [test case] Delete Data
+#### [test case] Delete Data
 Sample SPARQL: delete all properties of person P001
 ```
 DELETE  WHERE { :P1001 ?p ?o. } 
@@ -93,7 +93,7 @@ Paste this sparql to browser [update] area, and submit this transaction
 
 ![image](https://user-images.githubusercontent.com/91399393/176491911-fa8e9089-5c78-4054-929d-aed3f38099dc.png)
 
-- [test case] SPARQL Query
+#### [test case] SPARQL Query
 For now, data query can only operate by calling RPC sparql_query with SPARQL.
 Sample SPARQL: query the basic personal properties of person P001
 ```
