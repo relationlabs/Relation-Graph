@@ -25,6 +25,7 @@ https://user-images.githubusercontent.com/91399393/176400350-874d2ebe-c01b-47af-
 - open the browse(highly recommended chrome, Safari and others browers may encounter some problems)
 - open the link: https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/explorer
 - when connection the node, you will see the page display as below
+![image](https://user-images.githubusercontent.com/91399393/176409173-c464e241-a6e5-4609-b9a6-21a61b37753f.png)
 
 
 ## 
