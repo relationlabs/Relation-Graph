@@ -1,4 +1,5 @@
 # Relation-Graph user guide
+
 ## prepare
 - get the Executable program 
 ```shell
@@ -6,7 +7,7 @@ git clone https://github.com/relationlabs/Relation-Graph.git
 ```
 - choose the program for your OS and unzip it, take MacOS as example
 ```shell
-cd Executable Program
+cd /Executable Program
 unzip subgraph-macos.zip
 ```
 ## Launch
@@ -19,12 +20,14 @@ unzip subgraph-macos.zip
 ./subgraph-linux --dev  --base-path ./test-chain
 ```
 please make sure the port 9944 is available,and if the program launch successfully, you see the command line as below
+
 ![image](https://user-images.githubusercontent.com/91399393/176400350-874d2ebe-c01b-47af-9f3e-8fc7dcd17b7d.png)
 
 ## Connection Node
 - open the browser (highly recommended chrome, Safari and others browsers may encounter some problems)
 - open the link: https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/explorer
 - when connection the node, you will see the page display as below
+
 ![image](https://user-images.githubusercontent.com/91399393/176409173-c464e241-a6e5-4609-b9a6-21a61b37753f.png)
 
 
@@ -34,11 +37,17 @@ please make sure the port 9944 is available,and if the program launch successful
 Developer -> extrinsics
 ```
 - choose a account which have balance and choose [graphdb] extrinsic，then initDb
+
 ![image](https://user-images.githubusercontent.com/91399393/176415644-857882ac-5eda-43a5-8082-e985aa518bd9.png)
+
 - click Sign and Submit
+
 ![image](https://user-images.githubusercontent.com/91399393/176415961-9814c3f1-52dd-4215-a873-a2cf261a1fbb.png)
+
 - after transaction success, switch to sparqlUpdate to manipulate the database
+
 ![image](https://user-images.githubusercontent.com/91399393/176416651-8318b78e-8373-4f70-9cff-7a83ad496c01.png)
+
 - [test case] insert Data. 
 Sample SPARQL: insert a record for person P1001
 ```
@@ -52,6 +61,7 @@ INSERT DATA
 }
 ```
 paste this sparql to browser [update] area, and submit this transaction
+
 ![image](https://user-images.githubusercontent.com/91399393/176417734-9100574b-df72-4088-84dc-e1c65c6f937a.png)
 
 - [test case] Update Data
@@ -63,6 +73,7 @@ Sample SPARQL: update age to 36 for person P001
 DELETE  { :P1001 :age ?o } INSERT { :P1001 :age 36 } WHERE { :P1001 :age ?o }
 ```
 paste this sparql to browser [update] area, and submit this transaction
+
 ![image](https://user-images.githubusercontent.com/91399393/176489974-5be46194-bd71-4d2a-abed-15bcd7b9ff26.png)
 - [test case] Delete Data
 Sample SPARQL: delete all properties of person P001
@@ -70,6 +81,7 @@ Sample SPARQL: delete all properties of person P001
 DELETE  WHERE { :P1001 ?p ?o. } 
 ```
 paste this sparql to browser [update] area, and submit this transaction
+
 ![image](https://user-images.githubusercontent.com/91399393/176491417-04c759b9-2f6a-4a26-be0d-aa23f51f64d6.png)
 
 Sample SPARQL: delete partial properties of person P001
@@ -78,6 +90,7 @@ Sample SPARQL: delete partial properties of person P001
 DELETE  WHERE { :P1001 :age ?age; :name ?name . } 
 ```
 paste this sparql to browser [update] area, and submit this transaction
+
 ![image](https://user-images.githubusercontent.com/91399393/176491911-fa8e9089-5c78-4054-929d-aed3f38099dc.png)
 
 - [test case] SPARQL Query
@@ -89,7 +102,9 @@ curl -H "Content-Type: application/json" \
     http://localhost:9933
 ```
 paste this sparql to command line
+
 ![image](https://user-images.githubusercontent.com/91399393/176492690-0246ee9b-fe97-4bf3-a7fb-9cdfda8ee541.png)
+
 Sample SPARQL: query the relationship of person P001
 ```
 curl -H "Content-Type: application/json" \
@@ -97,4 +112,5 @@ curl -H "Content-Type: application/json" \
     http://localhost:9933
 ```
 paste this sparql to command line
+
 ![image](https://user-images.githubusercontent.com/91399393/176493931-21f3f8e5-fffe-4e6c-83c2-93e4d717e003.png)
