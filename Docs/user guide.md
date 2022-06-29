@@ -19,7 +19,7 @@ unzip subgraph-macos.zip
 ```shell
 ./subgraph-linux --dev  --base-path ./test-chain
 ```
-Please make sure the port 9944 is available,and if the program launch successfully, you see the command line as below
+Please make sure the port 9944 and 9933 is available,and if the program launch successfully, you see the command line as below
 
 ![image](https://user-images.githubusercontent.com/91399393/176400350-874d2ebe-c01b-47af-9f3e-8fc7dcd17b7d.png)
 
