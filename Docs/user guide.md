@@ -19,7 +19,7 @@ unzip subgraph-macos.zip
 ./subgraph-linux --dev  --base-path ./test-chain
 ```
 please make sure the port 9944 is available,and if the program launch successfully, you see the command line as below
-https://user-images.githubusercontent.com/91399393/176400350-874d2ebe-c01b-47af-9f3e-8fc7dcd17b7d.png
+![image](https://user-images.githubusercontent.com/91399393/176400350-874d2ebe-c01b-47af-9f3e-8fc7dcd17b7d.png)
 
 ## Connection Node
 - open the browse(highly recommended chrome, Safari and others browers may encounter some problems)
