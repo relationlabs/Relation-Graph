@@ -1,4 +1,4 @@
-# Relation-Graph user guide
+# Relation-Graph User Guide
 
 ## Prepare
 ### Get the Executable program 
