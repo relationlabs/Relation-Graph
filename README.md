@@ -1,20 +1,6 @@
 # Relation-Graph
 
 ## Introduction
-Relation Graph is a substrate pallet that allows anyone to use GraphDB in Substrate platform. Relation Graph provides organizations with ready-to-use GraphDB service for successfully running Dapps on the Substrate. using Relation Graph Dapps builders can focus on bussiness logic by removing the complexities of Substrate.
-
-## Overview
-### Documentation
-Introduct the functions and the implementation principle of Relation Graph.
-### Compile Program Package
-Two programs which can separately execute on Linux and MacOS.
-### Testing Guide
-Provide unit tests to cover all basic logic.
-
-### Project Details
-
-**Relation Graph**
-
 `Relation Graph` is a substrate pallet that allows anyone to use GraphDB in [Substrate platform](https://substrate.io/).
 `Relation Graph` provides organizations with ready-to-use GraphDB service for successfully running Dapps on the Substrate.  using `Relation Graph` Dapps builders can focus on bussiness logic by removing the complexities of Substrate.
 1、one click deploy on substrate;
@@ -28,76 +14,15 @@ It supports the following specifications:
 
 ![arch.png](https://user-images.githubusercontent.com/91399393/165587783-c55954fe-6d72-4702-95d9-75a4521e980d.png)
 
-**Usage**
-
-1. SPARQL Update
-
-Call extrinsic `sparql_update` with SPARQL for `insert, update, delete` operations.
-
-Try SPARQL update in [Pallet Interactor](http://localhost:8000/substrate-front-end-template) as follows.
-
-- Insert Data
-
-Sample SPARQL: insert a record for person `P001`
-
-```sparql
-INSERT DATA
-{
-   :P001 :name "Luna" ;
-         :gender "Female" ;
-         :age 35 ;
-         :birthdate "1986-10-14"^^xsd:date ;
-         :friends :P2, :P3 .
-}
-```
-
-- Update Data
-
-Changes to existing triples are performed as a delete operation followed by an insert operation in a single update request. 
-The specification refers to this as `DELETE/INSERT`
-
-Sample SPARQL: update age to `36` for person `P001`
-
-```sparql
-DELETE
-{ :P001 :age ?o }
-INSERT
-{ :P001 :age 36 }
-WHERE
-{ :P001 :age ?o }
-```
-
-- Delete Data
-
-Sample SPARQL: delete all properties of person `P001`
-
-```sparql
-DELETE WHERE
-{
-:P001 ?p ?o .
-}
-```
-Sample SPARQL: delete partial properties of person `P001`
-
-```sparql
-DELETE WHERE
-{
-:P001 :age ?age;
-      :name ?name .
-}
-```
-2. SPARQL Query
-
-Call RPC `sparql_query` with SPARQL for `query` operations.
-
-```bash
-curl -H "Content-Type: application/json" \
-    -d '{"id":1, "jsonrpc":"2.0", "method": "sparql_query", "params": ["SELECT ?name ?age  WHERE { :P1 :name ?name; :age ?age .}"]}' \
-    http://localhost:9933    
-```
-
-
-### Ecosystem Fit
+## Ecosystem Fit
 
 - Relation graph can effectively reduces the development threshold of building Web3 decentralized applications which contains large data.
 - It will bring a pallet of graph database to Polkadot ecosystem.
+
+## Overview
+### Documentation
+Introduct the functions and the implementation principle of Relation Graph.
+### Compile Program Package
+Two programs which can separately execute on Linux and MacOS.
+### Testing Guide
+Provide unit tests to cover all basic logic.
