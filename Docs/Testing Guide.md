@@ -1,4 +1,4 @@
-# Relation-Graph User Guide
+# Relation Graph Testing Guide
 
 #### [Test Case] Insert Data. 
 Sample SPARQL: insert a record for person P1001
