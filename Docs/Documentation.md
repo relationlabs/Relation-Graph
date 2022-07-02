@@ -5,7 +5,7 @@
 `Relation Graph` provides organizations with ready-to-use GraphDB service for successfully running Dapps on the Substrate.  using `Relation Graph` Dapps builders can focus on bussiness logic by removing the complexities of Substrate.
 
 ## Prepare
-### Get the Executable program 
+### Get the Executable files 
 ```shell
 git clone https://github.com/relationlabs/Relation-Graph.git
 ```
