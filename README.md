@@ -1,4 +1,4 @@
-# Relation-Graph
+# Relation Graph
 
 ## Introduction
 `Relation Graph` is a substrate pallet that allows anyone to use GraphDB in [Substrate platform](https://substrate.io/).
