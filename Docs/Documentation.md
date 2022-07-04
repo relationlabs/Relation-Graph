@@ -30,7 +30,7 @@ Please make sure the port 9944 and 9933 is available,and if the program launch s
 ## Connection Node
 - Open the browser (highly recommended chrome, Safari and others browsers may encounter some problems)
 - Open the link: https://polkadot.js.org/apps/?rpc=ws%3A%2F%2F127.0.0.1%3A9944#/explorer
-- When connection the node, you will see the page display as below
+- When connect the node successfully, you will see the page display as below
 
 ![image](https://user-images.githubusercontent.com/91399393/176409173-c464e241-a6e5-4609-b9a6-21a61b37753f.png)
 
