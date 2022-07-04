@@ -11,7 +11,7 @@ git clone https://github.com/relationlabs/Relation-Graph.git
 ```
 ### Choose the program for your OS and unzip it, take MacOS as example
 ```shell
-cd /Executable Program
+cd /Executable Files
 unzip subgraph-macos.zip
 ```
 ## Launch
