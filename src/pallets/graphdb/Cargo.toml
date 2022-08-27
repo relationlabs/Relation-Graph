@@ -1,0 +1,106 @@
+[package]
+name = "pallet-graphdb"
+version = "0.1.0"
+authors = ["graphdb authors"]
+readme = "README.md"
+keywords = ["RDF", "SPARQL", "graph-database", "database"]
+categories = ["database"]
+description = "a SPARQL database and RDF toolkit"
+edition = "2018"
+# Setting package to false to prevent accidental publishing of
+# code to crates.io, as described here:
+# https://doc.rust-lang.org/cargo/reference/manifest.html#the-publish--field-optional
+publish = false
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[package.metadata.docs.rs]
+all-features = true
+
+[features]
+default = ["std"]
+
+# substrate
+std = [
+    #"hex",
+    #"rand",
+    "codec/std",
+    "scale-info/std",
+    "frame-support/std",
+    "frame-system/std",
+    # "frame-benchmarking/std",
+    "sparql-results-json",
+]
+try-runtime = ["frame-support/try-runtime"]
+
+# graphdb
+sophia = ["sophia_api"]
+http_client = ["httparse", "native-tls"]
+# sparql-results
+# NOTE: sparql-results-csv has no external dependency and enabled by default
+sparql-results-json = ["json-event-parser"]
+sparql-results-xml = ["quick-xml"]
+
+[dependencies]
+# ogm dependencies
+serde_json = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+
+# core dependencies
+md-5 = "0.9"
+sha-1 = "0.9"
+sha2 = "0.9"
+digest = "0.9"
+regex = "1"
+
+# disable default-features for no-std
+hex = { version = "0.4", optional = false, default-features = false, features = ["alloc"] }
+nom = "6"
+peg = "0.7"
+# for numeric encoder, still used in pallets/graphdb/src/sparql/dataset.rs
+lasso = { version = "0.5", features = ["multi-threaded", "inline-more"] }
+# for binary encoder
+siphasher = "0.3"
+
+# graphdb related
+# language tag normalization and validation
+oxilangtag = "0.1"
+# IRI validation and relative IRI resolution
+oxiri = "0.1"
+# RDF parsers library (https://github.com/oxigraph/rio)
+rio_api = "0.5"
+rio_turtle = "0.5"
+rio_xml = "0.5"
+
+# feature: sophia
+# toolkit for working with RDF and Linked Data
+sophia_api = { version = "0.6.2", optional = true }
+
+# TODO: make http as a feature
+http = "0.2"
+httparse = { version = "1", optional = true }
+native-tls = { version = "0.2", optional = true }
+
+# feature: sparql-results-json
+json-event-parser = { version = "0.1", optional = true }
+# feature: sparql-results-xml
+quick-xml = { version = "0.22", optional = true }
+
+#[target.'cfg(target_arch = "wasm32")'.dependencies]
+##getrandom = {version="0.2", features=["custom"]}
+#getrandom = { version = "0.2", features = ["js"] }
+
+# substrate dependencies
+rand = { version = "0.7.2", optional = false }
+codec = { package = "parity-scale-codec", version = "2.0.0", default-features = false, features = ["derive"] }
+scale-info = { version = "1.0", default-features = false, features = ["derive"] }
+frame-support = { default-features = false, version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.17"}
+frame-system = { default-features = false, version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.17" }
+sp-std = { default-features = false, version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.17" }
+#frame-benchmarking = { default-features = false, version = "4.0.0-dev", git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.17", optional = true }
+
+pallet-timestamp = { version = "4.0.0-dev", default-features = false, git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.17" }
+
+[dev-dependencies]
+rayon = "1"
+criterion = "0.3"
+sophia_api = { version = "0.6.2", features = ["test_macro"] }
