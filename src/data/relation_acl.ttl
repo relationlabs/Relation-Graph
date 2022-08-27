@@ -1,0 +1,35 @@
+PREFIX acl: <http://relationlabs.ai/acl/>
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+###################
+# Schema
+###################
+
+acl:User a rdfs:Class ;
+    rdfs:label "User" ;
+    rdfs:comment "A db user." .
+
+acl:id a rdf:Property ;
+    rdfs:label "id" ;
+    rdfs:comment "The id of a user." ;
+    rdfs:range xsd:string .
+
+acl:role a rdf:Property ;
+    rdfs:label "role" ;
+    rdfs:comment "The role of a user." ;
+    rdfs:range xsd:string .
+
+###################
+# Data
+###################
+
+# examples:
+#acl:u_rwlgt-iiaaa-aaaaa-aaaaa-cai a acl:User ;
+#    acl:id "rwlgt-iiaaa-aaaaa-aaaaa-cai" ;
+#    acl:role "admin" .
+#
+#acl:u_ryjl3-tyaaa-aaaaa-aaaba-cai a acl:User ;
+#    acl:id "ryjl3-tyaaa-aaaaa-aaaba-cai" ;
+#    acl:role "user" .
