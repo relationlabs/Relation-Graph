@@ -10,7 +10,7 @@ It supports the following specifications:
 
 ## Usage
 
-before use SPARQL, please follow the part "start up by compiling src code" of [prepare document](https://github.com/relationlabs/Relation-Graph/blob/main/Docs/Documentation.md).
+before use SPARQL, please follow the part "start up by compiling src code" of [prepare document](https://github.com/relationlabs/Relation-Graph/blob/main/docs/Documentation.md)
 
 ### SPARQL Update
 
