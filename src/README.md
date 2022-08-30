@@ -10,11 +10,11 @@ It supports the following specifications:
 
 ## Usage
 
+before use SPARQL, please follow the part "start up by compiling src code" of [prepare document](https://github.com/relationlabs/Relation-Graph/blob/main/Docs/Documentation.md).
+
 ### SPARQL Update
 
 Call extrinsic `sparql_update` with SPARQL for `insert, update, delete` operations.
-
-Try SPARQL update in [Pallet Interactor](http://localhost:8000/substrate-front-end-template) as follows.
 
 #### Insert Data
 
@@ -75,60 +75,6 @@ Call RPC `sparql_query` with SPARQL for `query` operations.
 curl -H "Content-Type: application/json" \
     -d '{"id":1, "jsonrpc":"2.0", "method": "sparql_query", "params": ["SELECT ?name ?age  WHERE { :P1 :name ?name; :age ?age .}"]}' \
     http://localhost:9933    
-```
-
-## Build
-
-```bash
-# build native node for subgraph
-SKIP_WASM_BUILD=1 cargo build
-```
-
-## Run
-
-```bash
-./target/debug/node-template --dev  --base-path ./test-chain
-```
-
-### Sparql Query
-
-```sh
-curl -H "Content-Type: application/json" \
-     -d '{"id":1, "jsonrpc":"2.0", "method": "sparql_query", "params": ["SELECT ?friends1 WHERE { :P1 :friends ?friends1 . }"]}' \
-     http://localhost:9933 
-     
-```
-
-### Sparql Update
-
-* Update
-
-Update data in [Pallet Interactor](http://localhost:8000/substrate-front-end-template)
-
-```SPARQL
-DELETE
-{ :P1 :age ?o }
-INSERT
-{ :P1 :age 26 }
-WHERE
-{ :P1 :age ?o }
-```
-
-* Query
-
-Query to check update result.
-
-```sh
-curl -H "Content-Type: application/json" \
-    -d '{"id":1, "jsonrpc":"2.0", "method": "sparql_query", "params": ["SELECT ?name ?age  WHERE { :P1 :name ?name; :age ?age .}"]}' \
-    http://localhost:9933    
-     
-```
-
-```sh
-curl -H "Content-Type: application/json" \
-    -d '{"id":2, "jsonrpc":"2.0", "method": "sparql_query", "params": ["SELECT DISTINCT ?name ?age ?gender ?birthdate WHERE {:P1 :friends ?friend1. ?friends1 :friends  ?friends2. ?friends2 :friends  ?friends3. ?friends3 a :Person ; :name ?name; :age ?age; :gender ?gender; :birthdate ?birthdate.} LIMIT 10"]}' \
-    http://localhost:9933
 ```
 
 ## Benchmarks
