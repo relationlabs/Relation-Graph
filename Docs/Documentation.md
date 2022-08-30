@@ -5,8 +5,8 @@
 
 ## Prepare
 There are two ways to start up this project, you can choose either one.
-- 1. go get the executable file and launch it directly.
-- 2. download the src code, compile and launch it.
+1. go get the executable file and launch it directly.
+2. download the src code, compile and launch it.
 ### Get Relation Graph project 
 ```shell
 git clone https://github.com/relationlabs/Relation-Graph.git
