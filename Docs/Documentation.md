@@ -11,13 +11,13 @@ There are two ways to start up this project:
 ```shell
 git clone https://github.com/relationlabs/Relation-Graph.git
 ```
-### 1.start up through executable
+### 1.start up through executable file
 #### Choose the program for MacOS and unzip it
 ```shell
 cd /Executable Files
 unzip subgraph-macos.zip
 ```
-#### launch executable file
+#### launch the executable file
 ```shell
 ./subgraph-macos --dev  --base-path ./test-chain
 ```
@@ -27,21 +27,21 @@ unzip subgraph-macos.zip
 cd /Executable Files
 unzip subgraph-linux.zip
 ```
-##### launch executable file
+#### launch the executable file
 ```shell
 ./subgraph-linux --dev  --base-path ./test-chain
 ```
 ### 2.start up by compiling src code
 before compile the src code, please make sure your OS has installed "cargo",which is the Rust build tool and package manager. 
+#### compile src code 
 ```shell
 cd /src
 SKIP_WASM_BUILD=1 cargo build
 ```
-RUN
+#### launch the compiled file
 ```shell
 ./target/debug/node-template --dev  --base-path ./test-chain
 ```
-
 
 Please make sure the port 9944 and 9933 is available,and if the program launch successfully, you see the command line as below
 
