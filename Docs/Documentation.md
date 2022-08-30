@@ -4,24 +4,45 @@
 `Relation Graph` provides organizations with ready-to-use GraphDB service for successfully running Dapps on the Substrate.  using `Relation Graph` Dapps builders can focus on bussiness logic by removing the complexities of Substrate.
 
 ## Prepare
-### Get the Executable files 
+There are two ways to start up this project: 
+- 1. go get the executable file and launch it directly.
+- 2. download the src code, compile it then launch it.
+### Get Relation Graph project 
 ```shell
 git clone https://github.com/relationlabs/Relation-Graph.git
 ```
-### Choose the program for your OS and unzip it, take MacOS as example
+### 1.start up through executable
+#### Choose the program for MacOS and unzip it
 ```shell
 cd /Executable Files
 unzip subgraph-macos.zip
 ```
-## Launch
-### MacOS
+#### launch executable file
 ```shell
 ./subgraph-macos --dev  --base-path ./test-chain
 ```
-### Linux
+------
+#### Choose the program for Linux and unzip it
+```shell
+cd /Executable Files
+unzip subgraph-linux.zip
+```
+##### launch executable file
 ```shell
 ./subgraph-linux --dev  --base-path ./test-chain
 ```
+### 2.start up by compiling src code
+before compile the src code, please make sure your OS has installed "cargo",which is the Rust build tool and package manager. 
+```shell
+cd /src
+SKIP_WASM_BUILD=1 cargo build
+```
+RUN
+```shell
+./target/debug/node-template --dev  --base-path ./test-chain
+```
+
+
 Please make sure the port 9944 and 9933 is available,and if the program launch successfully, you see the command line as below
 
 ![image](https://user-images.githubusercontent.com/91399393/176400350-874d2ebe-c01b-47af-9f3e-8fc7dcd17b7d.png)
