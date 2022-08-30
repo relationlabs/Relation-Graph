@@ -7,6 +7,7 @@
 There are two ways to start up this project, you can choose either one.
 1. Get the executable file and launch it directly.
 2. Download the src code, compile and launch it.
+
 ### 1. Launch project through executable file
 #### Get the executable for your OS(Mac or Linux)
 [executable file](https://github.com/relationlabs/Relation-Graph/tree/executable-files/Executable%20Files)
@@ -23,7 +24,7 @@ unzip subgraph-macos.zip
 ```shell
 ./subgraph-macos --dev  --base-path ./test-chain
 ```
-------
+
 #### Linux
 
 - Choose the program for Linux and unzip it
@@ -36,6 +37,8 @@ unzip subgraph-linux.zip
 ```shell
 ./subgraph-linux --dev  --base-path ./test-chain
 ```
+------
+
 ### 2. Start up by compiling the src code
 Before compile the src code, please make sure your OS has installed "cargo",which is the Rust build tool and package manager. 
 #### Get and compile src code 
