@@ -4,7 +4,7 @@
 `Relation Graph` provides organizations with ready-to-use GraphDB service for successfully running Dapps on the Substrate.  using `Relation Graph` Dapps builders can focus on bussiness logic by removing the complexities of Substrate.
 
 ## Prepare
-There are two ways to start up this project: 
+There are two ways to start up this project, you can choose either one.
 - 1. go get the executable file and launch it directly.
 - 2. download the src code, compile and launch it.
 ### Get Relation Graph project 
