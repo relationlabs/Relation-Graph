@@ -7,13 +7,11 @@
 There are two ways to start up this project, you can choose either one.
 1. go get the executable file and launch it directly.
 2. download the src code, compile and launch it.
-### Get Relation Graph project 
-https://github.com/relationlabs/Relation-Graph/tree/executable-files/Executable%20Files
-```shell
-git clone https://github.com/relationlabs/Relation-Graph.git
-```
+### [Get the executable for your OS](https://github.com/relationlabs/Relation-Graph/tree/executable-files/Executable%20Files) 
+
 ### 1.start up through executable file
 #### Choose the program for MacOS and unzip it
+
 ```shell
 cd /Executable Files
 unzip subgraph-macos.zip
