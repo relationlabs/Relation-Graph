@@ -2,6 +2,7 @@
 
 #### [Test Case] Insert Data.
 In the Function of these Version, each database has an access control list (ACL) which specifies the different levels of access the data. In this Demo, when we start the Graph Database, the first thing is initialize configuration of Database, which contains Loading the ACL Data file.
+
 ```
 pub fn init_data() {
         let graph_store = GraphStore::<T>::new();
@@ -20,7 +21,7 @@ pub fn init_data() {
                                &GraphName::DefaultGraph,
                                None).unwrap();
 
-    }
+}
 ```
 
 ```
