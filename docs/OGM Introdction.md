@@ -36,7 +36,7 @@ pub mod templates {
 - In the query project, we create a file folder named "templates", and
 the sparkQL of query user  "user_find_by_name.rq"
 
-https://user-images.githubusercontent.com/91399393/188101137-30b182d8-d105-4d06-b176-26696f8e0a9b.jpg
+![1662107996468](https://user-images.githubusercontent.com/91399393/188101137-30b182d8-d105-4d06-b176-26696f8e0a9b.jpg)
 
 - In the 'find_one' function, there is the most important is converting data logic which implement in the function of "as_typed_value"
 
