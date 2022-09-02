@@ -2,7 +2,7 @@
 
 In order to use Relation Graph conveniently, we provide the ORM tools which is for converting data between type systems using Rust.
 
-Then we will use an example to introduce the process of implementing OGM of Relation Graph.
+We will use an example to introduce the process of implementing OGM of Relation Graph.
 
 Example: query a user info by user id base on the OGM tools:
 
