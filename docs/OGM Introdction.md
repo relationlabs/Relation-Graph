@@ -4,14 +4,15 @@ In order to use Relation Graph conveniently, we provide the OGM tools which is f
 
 We will use an example to introduce the process of implementing OGM of Relation Graph.
 
-Example: query a user info by user id base on the OGM tools:
+Example: 
+- Query a user info by user id base on the OGM tools:
 
 ```
 let userId = "123";
 let result: GraphReslut<Option<User>> =  find_user(userId).await;
 ```
 
-The Implement of function of "find_user" is:
+- The Implement of function of "find_user" is:
 ```
 pub async fn find_user(id: &str) -> GraphResult<Option<User>> {
     ogm::find_one(
@@ -32,10 +33,12 @@ pub mod templates {
 }
 
 ```
-In the query project, we create a file folder named "templates", and
+- In the query project, we create a file folder named "templates", and
 the sparkQL of query user  "user_find_by_name.rq"
 
-In the 'find_one' function, there is the most important is converting data logic which implement in the function of "as_typed_value"
+https://user-images.githubusercontent.com/91399393/188101137-30b182d8-d105-4d06-b176-26696f8e0a9b.jpg
+
+- In the 'find_one' function, there is the most important is converting data logic which implement in the function of "as_typed_value"
 
 ```
 pub async fn find_one<T: DeserializeOwned, S: SparqlTemplate>(query: S) -> GraphResult<Option<T>> {
