@@ -36,7 +36,10 @@ pub mod templates {
 - In the query project, we create a file folder named **templates**, and
 the sparkQL of query user  **user_find_by_name.rq**
 
-![image](https://user-images.githubusercontent.com/91399393/188102083-1eb56a9e-1ad9-4539-9bfa-3e8673d10280.png)
+![image](https://user-images.githubusercontent.com/91399393/188111906-455adf98-a72f-43ec-8795-8a346a0e8057.png)
+
+- In the askama.toml config file, set the path of **templates** folder
+![image](https://user-images.githubusercontent.com/91399393/188111736-1ab61449-6569-4b4c-b5d1-b37b61246d71.png)
 
 - In the **find_one** function, there is the most important is converting data logic which implement in the function of **as_typed_value**
 
