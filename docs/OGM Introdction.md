@@ -9,10 +9,10 @@ Example:
 
 ```
 let userName = "P1001";
-let result: GraphReslut<Option<User>> =  ==find_user== (userName).await;
+let result: GraphReslut<Option<User>> = find_user(userName).await;
 ```
 
-- The Implement of function of "find_user" is:
+- The Implement of function of **find_user** is:
 ```
 pub async fn find_user(id: &str) -> GraphResult<Option<User>> {
     ogm::find_one(
@@ -33,12 +33,12 @@ pub mod templates {
 }
 
 ```
-- In the query project, we create a file folder named "templates", and
-the sparkQL of query user  "user_find_by_name.rq"
+- In the query project, we create a file folder named **templates**, and
+the sparkQL of query user  **user_find_by_name.rq**
 
 ![image](https://user-images.githubusercontent.com/91399393/188102083-1eb56a9e-1ad9-4539-9bfa-3e8673d10280.png)
 
-- In the 'find_one' function, there is the most important is converting data logic which implement in the function of "as_typed_value"
+- In the **find_one** function, there is the most important is converting data logic which implement in the function of **as_typed_value**
 
 ```
 pub async fn find_one<T: DeserializeOwned, S: SparqlTemplate>(query: S) -> GraphResult<Option<T>> {
