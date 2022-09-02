@@ -5,11 +5,11 @@ In order to use Relation Graph conveniently, we provide the OGM tools which is f
 We will use an example to introduce the process of implementing OGM of Relation Graph.
 
 Example: 
-- Query a user info by user id base on the OGM tools:
+- Query a user info by name base on the OGM tools:
 
 ```
-let userId = "123";
-let result: GraphReslut<Option<User>> =  find_user(userId).await;
+let userName = "P1001";
+let result: GraphReslut<Option<User>> =  find_user(userName).await;
 ```
 
 - The Implement of function of "find_user" is:
@@ -36,7 +36,7 @@ pub mod templates {
 - In the query project, we create a file folder named "templates", and
 the sparkQL of query user  "user_find_by_name.rq"
 
-![1662107996468](https://user-images.githubusercontent.com/91399393/188101137-30b182d8-d105-4d06-b176-26696f8e0a9b.jpg)
+![image](https://user-images.githubusercontent.com/91399393/188102083-1eb56a9e-1ad9-4539-9bfa-3e8673d10280.png)
 
 - In the 'find_one' function, there is the most important is converting data logic which implement in the function of "as_typed_value"
 
