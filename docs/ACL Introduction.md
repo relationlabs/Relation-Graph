@@ -1,7 +1,9 @@
 # ACL Introdction
 
 #### [Test Case] Insert Data.
-In the Function of these Version, each database has an access control list (ACL) which specifies the different levels of access the data. In this Demo, when we start the Graph Database, the first thing is initialize configuration of Database, which contains Loading the ACL Data file.
+From now on, we finished the access control list (ACL) funciton which allow user to use Reltion Graph with the different levels of access the data. 
+
+In the source code, we can see, when start the Relation Graph, the first thing is initialize configuration of Database, which contains Loading the ACL Data file.
 
 ```
 pub fn init_data() {
