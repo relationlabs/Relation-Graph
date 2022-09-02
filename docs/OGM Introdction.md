@@ -9,7 +9,7 @@ Example:
 
 ```
 let userName = "P1001";
-let result: GraphReslut<Option<User>> =  find_user(userName).await;
+let result: GraphReslut<Option<User>> =  **find_user**(userName).await;
 ```
 
 - The Implement of function of "find_user" is:
