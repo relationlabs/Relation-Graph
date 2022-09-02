@@ -1,6 +1,6 @@
 # OGM Introdction
 
-In order to use Relation Graph conveniently, we provide the ORM tools which is for converting data between type systems using Rust.
+In order to use Relation Graph conveniently, we provide the OGM tools which is for converting data between type systems using Rust.
 
 We will use an example to introduce the process of implementing OGM of Relation Graph.
 
