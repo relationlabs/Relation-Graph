@@ -5,6 +5,73 @@ In order to let user to use Relation Graph conveniently, we provide the OGM tool
 
 There are 6 functions in OGM tools
 
+- **find_one** query one record from Relation Graph
+```
+pub async fn find_one<T: DeserializeOwned, S: SparqlTemplate>(query: S) -> RelationResult<Option<T>> {
+    if let Ok(QueryResults::Solutions(mut solutions)) = execute_query(query).await {
+        match solutions.next() {
+            Some(first) => {
+                match solutions.next() {
+                    Some(_) => {
+                        Err(RelationError::ResultNotUnique("Expected one record".to_string()))
+                    }
+                    None => {
+                        let record: Option<T> = first?.as_typed_value();
+                        Ok(record)
+                    }
+                }
+            }
+            None => Ok(None),
+        }
+    } else {
+        Ok(None)
+    }
+}
+
+pub async fn find_many<T: DeserializeOwned, S: SparqlTemplate>(query: S) -> RelationResult<Vec<T>> {
+    let data = if let Ok(QueryResults::Solutions(solutions)) = execute_query(query).await {
+        let mut records = vec![];
+        for solution in solutions {
+            let record: Option<T> = solution?.as_typed_value();
+            if let Some(record) = record {
+                records.push(record);
+            }
+        }
+        records
+    } else {
+        vec![]
+    };
+    Ok(data)
+}
+
+pub async fn exists<S: SparqlTemplate>(ask: S) -> RelationResult<bool> {
+    Ok(if let Ok(QueryResults::Boolean(exists)) = execute_query(ask).await {
+        exists
+    } else {
+        false
+    })
+}
+
+pub async fn execute_query<T: SparqlTemplate>(query: T) -> RelationResult<QueryResults> {
+    let sparql = to_sparql(query)?;
+    db::sparql_query(&sparql).await
+}
+
+pub async fn execute_update<S: SparqlTemplate>(update: S) -> RelationResult {
+    let sparql = to_sparql(update)?;
+    db::sparql_update(&sparql).await.map_err(RelationError::from)
+}
+
+pub async fn execute_transaction<S: SparqlTemplate>(updates: Vec<S>) -> RelationResult {
+    let mut sparqls = vec![];
+    for update in updates {
+        sparqls.push(to_sparql(update)?);
+    }
+    let updates = sparqls.iter().map(AsRef::as_ref).collect();
+    db::sparql_transaction(updates).await
+}
+```
+
 
 Next, we will use an example to introduce the process of implementing OGM of Relation Graph.
 
