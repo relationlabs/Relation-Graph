@@ -5,7 +5,7 @@ In order to let user to use Relation Graph conveniently, we provide the OGM tool
 
 There are 6 functions in OGM tools
 
-- **find_one** query one record from Relation Graph
+- **find_one** : query one record from Relation Graph
 ```
 pub async fn find_one<T: DeserializeOwned, S: SparqlTemplate>(query: S) -> RelationResult<Option<T>> {
     if let Ok(QueryResults::Solutions(mut solutions)) = execute_query(query).await {
@@ -27,7 +27,9 @@ pub async fn find_one<T: DeserializeOwned, S: SparqlTemplate>(query: S) -> Relat
         Ok(None)
     }
 }
-
+```
+- **find_many** : query multiple records from Relation Graph
+```
 pub async fn find_many<T: DeserializeOwned, S: SparqlTemplate>(query: S) -> RelationResult<Vec<T>> {
     let data = if let Ok(QueryResults::Solutions(solutions)) = execute_query(query).await {
         let mut records = vec![];
