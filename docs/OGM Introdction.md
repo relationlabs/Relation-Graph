@@ -45,6 +45,10 @@ pub async fn find_many<T: DeserializeOwned, S: SparqlTemplate>(query: S) -> Rela
     };
     Ok(data)
 }
+```
+- **exists** : check if the query record exists in Relation Graph
+
+```
 
 pub async fn exists<S: SparqlTemplate>(ask: S) -> RelationResult<bool> {
     Ok(if let Ok(QueryResults::Boolean(exists)) = execute_query(ask).await {
