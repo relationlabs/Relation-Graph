@@ -2,6 +2,10 @@
 
 In order to let user to use Relation Graph conveniently, we provide the OGM tools which is for converting data between type systems using Rust.
 
+
+There are 6 functions in OGM tools
+
+
 Next, we will use an example to introduce the process of implementing OGM of Relation Graph.
 
 Example: 
