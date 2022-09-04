@@ -3,7 +3,7 @@
 In order to let user to use Relation Graph conveniently, we provide the OGM tools which is for converting data between type systems using Rust.
 
 
-There are 6 functions in OGM tools
+There are 6 functions in OGM tools:
 
 - **find_one** : query one record from Relation Graph.
 ```
@@ -66,7 +66,7 @@ pub async fn execute_query<T: SparqlTemplate>(query: T) -> RelationResult<QueryR
 }
 ```
 
-- **execute_update** execute the data manipulation such as insert, update and delete
+- **execute_update** execute the data manipulation such as insert, update and delete.
 ```
 pub async fn execute_update<S: SparqlTemplate>(update: S) -> RelationResult {
     let sparql = to_sparql(update)?;
