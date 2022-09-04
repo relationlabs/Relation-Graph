@@ -60,16 +60,21 @@ pub async fn exists<S: SparqlTemplate>(ask: S) -> RelationResult<bool> {
 ```
 
 ```
-
 pub async fn execute_query<T: SparqlTemplate>(query: T) -> RelationResult<QueryResults> {
     let sparql = to_sparql(query)?;
     db::sparql_query(&sparql).await
 }
+```
 
+- **execute_update** execute the data manipulation such as insert, update and delete
+```
 pub async fn execute_update<S: SparqlTemplate>(update: S) -> RelationResult {
     let sparql = to_sparql(update)?;
     db::sparql_update(&sparql).await.map_err(RelationError::from)
 }
+```
+- **execute_transaction** provides the ACID properties,make the write operations within a transaction have an all-or-nothing effect.
+```
 
 pub async fn execute_transaction<S: SparqlTemplate>(updates: Vec<S>) -> RelationResult {
     let mut sparqls = vec![];
