@@ -57,6 +57,9 @@ pub async fn exists<S: SparqlTemplate>(ask: S) -> RelationResult<bool> {
         false
     })
 }
+```
+
+```
 
 pub async fn execute_query<T: SparqlTemplate>(query: T) -> RelationResult<QueryResults> {
     let sparql = to_sparql(query)?;
