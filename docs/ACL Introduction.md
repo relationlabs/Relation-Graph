@@ -1,6 +1,6 @@
 # ACL Introdction
 
-We finished the access control list (ACL) funciton which allow user to use Reltion Graph with the different levels of access the data. 
+We are currently adding access control list (ACL) funciton which allow user to use Reltion Graph with the different levels of access the data. 
 
 In the source code, we can see, when start the Relation Graph, the first thing is initialize configuration of Database, which contains Loading the ACL Data file.
 
