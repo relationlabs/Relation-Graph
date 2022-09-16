@@ -1,0 +1,66 @@
+.graph-app {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(to left, #EE609C 0%, #EE609C 33%, #CF6CC9 66%, #B465DA 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 160px;
+  padding-bottom: 80px;
+}
+
+.graph-app .header {
+  font-size: 42px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 80px;
+}
+
+.graph-app .actions {
+  margin-bottom: 24px;
+}
+
+.graph-app .list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 798px;
+  min-height: 248px;
+  border-radius: 16px;
+  background-color: rgba(255,255,255,0.15);
+  padding: 24px;
+}
+
+.graph-app .list .loading-wrap {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.graph-app .list .list-head, .graph-app .list .list-item {
+  color: #fff;
+  font-size: 14px;
+  padding: 6px 0;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.graph-app .list .list-head span, .graph-app .list .list-item span {
+  flex-basis: 150px;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.graph-app .list .list-head {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+  padding-bottom: 24px;
+}

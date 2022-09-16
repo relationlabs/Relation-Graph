@@ -1,0 +1,25 @@
+.rel-btn {
+  padding: 8px 24px;
+  border-radius: 1000px;
+  border: 0;
+  background-color: rgba(255,255,255,0.15);
+  color: #fff;
+  font-size: 18px;
+  line-height: 22px;
+  height: 38px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.rel-btn.size-small {
+  font-size: 12px;
+  line-height: 16px;
+  height: 24px;
+  padding: 4px 12px;
+}
+.rel-btn.danger-true {
+  background-color: rgb(245 34 45 / 55%);
+}
+.rel-btn.disabled {
+  opacity: 0.3;
+  cursor: auto;
+}
