@@ -22,7 +22,7 @@ npm start
 
 ### 4. When the demo boot successfully, you will see the web as below:
 
-![image](https://user-images.githubusercontent.com/91399393/190834649-2f9c1e00-b43d-4a90-83f4-84b2cc523c1b.png)
+![image](https://user-images.githubusercontent.com/91399393/190834819-88755c14-1055-46dc-b197-f39bf1043f47.png)
 
 ### 4. Use this demo, you can query Relation Data easily
 
