@@ -3,9 +3,6 @@
 `Relation Graph scaffold` is a package of the minimal setup of web appliation components for Relation Graph. Using this one, developer can query Relation Graph data easily and quickly, also can integration this function to their Dapp .
 
 ## Prepare
-There are two ways to start up this project, you can choose either one.
-1. Get the executable file and launch it directly.
-2. Download the src code, compile and launch it.
 
 ### 1. Launch project through executable file
 #### Get the executable for your OS(Mac or Linux)
