@@ -10,73 +10,22 @@ It supports the following specifications:
 
 ## Usage
 
-before use SPARQL, please follow the part "start up by compiling src code" of [prepare document](https://github.com/relationlabs/Relation-Graph/blob/main/docs/Documentation.md)
-
-### SPARQL Update
-
-Call extrinsic `sparql_update` with SPARQL for `insert, update, delete` operations.
-
-#### Insert Data
-
-Sample SPARQL: insert a record for person `P001`
-
-```sparql
-INSERT DATA
-{
-   :P001 :name "Luna" ;
-         :gender "Female" ;
-         :age 35 ;
-         :birthdate "1986-10-14"^^xsd:date ;
-         :friends :P2, :P3 .
-}
+Before compile the src code, please make sure your OS has installed "cargo",which is the Rust build tool and package manager. 
+#### Get and compile src code 
+- Get the  src code 
+```shell
+git clone https://github.com/relationlabs/Relation-Graph.git
+```
+- Compile it 
+```shell
+cd /src
+SKIP_WASM_BUILD=1 cargo build
+```
+#### Launch the compiled file
+```shell
+./target/debug/node-template --dev  --base-path ./test-chain
 ```
 
-#### Update Data
+The more details of using this project, please reference the [prepare document](https://github.com/relationlabs/Relation-Graph/blob/main/docs/Documentation.md)
 
-Changes to existing triples are performed as a delete operation followed by an insert operation in a single update request. 
-The specification refers to this as `DELETE/INSERT`
 
-Sample SPARQL: update age to `36` for person `P001`
-
-```sparql
-DELETE
-{ :P001 :age ?o }
-INSERT
-{ :P001 :age 36 }
-WHERE
-{ :P001 :age ?o }
-```
-
-#### Delete Data
-
-Sample SPARQL: delete all properties of person `P001`
-
-```sparql
-DELETE WHERE
-{
-:P001 ?p ?o .
-}
-```
-Sample SPARQL: delete partial properties of person `P001`
-
-```sparql
-DELETE WHERE
-{
-:P001 :age ?age;
-      :name ?name .
-}
-```
-
-### SPARQL Query
-
-Call RPC `sparql_query` with SPARQL for `query` operations.
-
-```bash
-curl -H "Content-Type: application/json" \
-    -d '{"id":1, "jsonrpc":"2.0", "method": "sparql_query", "params": ["SELECT ?name ?age  WHERE { :P1 :name ?name; :age ?age .}"]}' \
-    http://localhost:9933    
-```
-
-## Benchmarks
-
-Run scripts in `scripts/benchmarks`
