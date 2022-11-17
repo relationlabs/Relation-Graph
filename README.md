@@ -1,14 +1,10 @@
 # Relation Graph
 
 ## Introduction
-`Relation Graph` is a substrate pallet that allows anyone to use GraphDB in [Substrate platform](https://substrate.io/).\
-`Relation Graph` provides organizations with ready-to-use GraphDB service for successfully running Dapps on the Substrate.\
-`Relation Graph` is drived from [oxigraph 0.2.x](https://github.com/oxigraph/oxigraph).
-
-Using `Relation Graph` Dapps builders can focus on bussiness logic by removing the complexities of Substrate.
-1. one click deploy on substrate.
-2. Mask complex all on-chain operations with sparql.
-3. sparql as blockchain.
+`Relation Graph` derived from Oxigraph 0.2.x is a substrate pallet that allows anyone to use GraphDB in the Substrate blockchain platform.
+It provides ready-to-use GraphDB service and hides the complexities for Dapps on the Substrate platform, so Dapps builders can focus on their business logic.
+- One click deploy on Substrate.
+- Hide the complexities of on-chain operations with SPARQL.
 
 It supports the following specifications:
 * [SPARQL 1.1 Query](https://www.w3.org/TR/sparql11-query/), [SPARQL 1.1 Update](https://www.w3.org/TR/sparql11-update/), and [SPARQL 1.1 Federated Query](https://www.w3.org/TR/sparql11-federated-query/).
