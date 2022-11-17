@@ -2,7 +2,8 @@
 
 ## Introduction
 `Relation Graph` is a substrate pallet that allows anyone to use GraphDB in [Substrate platform](https://substrate.io/).\
-`Relation Graph` provides organizations with ready-to-use GraphDB service for successfully running Dapps on the Substrate.
+`Relation Graph` provides organizations with ready-to-use GraphDB service for successfully running Dapps on the Substrate.\
+`Relation Graph` is drived from [oxigraph 0.2.x](https://github.com/oxigraph/oxigraph).
 
 Using `Relation Graph` Dapps builders can focus on bussiness logic by removing the complexities of Substrate.
 1. one click deploy on substrate.
@@ -16,7 +17,7 @@ It supports the following specifications:
 
 ![arch.png](https://user-images.githubusercontent.com/91399393/165587783-c55954fe-6d72-4702-95d9-75a4521e980d.png)
 
-`Relation Graph` is drived from [oxigraph 0.2.x](https://github.com/oxigraph/oxigraph).
+
 
 ## Ecosystem Fit
 
