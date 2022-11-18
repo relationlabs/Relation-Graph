@@ -1,9 +1,9 @@
 # Relation Graph
 
 ## Introduction
-`Relation Graph` derived from Oxigraph 0.2.x is a substrate pallet that allows anyone to use GraphDB in the Substrate blockchain platform.
+`Relation Graph` derived from [Oxigraph 0.2.x](https://github.com/oxigraph/oxigraph/tree/v0.2.5) is a substrate pallet that allows anyone to use GraphDB in the [Substrate blockchain platform](https://substrate.io/).  
 It provides ready-to-use GraphDB service and hides the complexities for Dapps on the Substrate platform, so Dapps builders can focus on their business logic.
-- One click deploy on Substrate.
+- One click deploy on Substrate.  
 - Hide the complexities of on-chain operations with SPARQL.
 
 It supports the following specifications:
